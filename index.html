@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DU </title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+  <div class="confetti-container"></div>
+
+  <div class="content">
+    <h1 class="greeting">ألف مبروك  💍❤️</h1>
+    <p class="subtext">أسأل الله أن يتمم لكم على خير، ويجمع بينكم في سعادة ورضا </p>
+    
+    <div class="images">
+      <img src="duaa1.jpg" alt="صورة 1" class="image" />
+      <img src="duaa2.jpg" alt="صورة 2" class="image" />
+    </div>
+  </div>
+  
+  <div class="blessing">
+    <p>
+      بأجمل عبارات التهاني وأطيب الأمنيات، نبارك لكِ يا غالية هذه الخطوة المباركة نحو حياة جديدة،<br>
+      جعلها الله بداية سعادة لا تنتهي، ورزقكِ الله حياةً مليئة بالمودة والرحمة والبركة 💍💖
+    </p>
+  </div>
+  <audio id="my-audio" autoplay>
+    <source src="Happy.mp3" type="audio/mpeg">
+    متصفحك لا يدعم تشغيل الصوت.
+  </audio>
+  
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('my-audio');
+      
+      function playAudioOnce() {
+        audio.play().catch(() => {}); // يتجاهل الخطأ إذا رفض المتصفح
+        document.removeEventListener('click', playAudioOnce);
+      }
+  
+      document.addEventListener('click', playAudioOnce);
+    });
+  </script>
+  
+</body>
+</html>

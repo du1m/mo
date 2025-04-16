@@ -1,0 +1,95 @@
+/* الكود الأساسي */
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #ff7eb9, #d63384); /* خلفية وردية مموجة */
+  text-align: center;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.greeting {
+  margin-top: 50px;
+  font-size: 3rem; /* حجم النص */
+  color: #fff; /* لون النص */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* ظل سميك للنص */
+}
+
+.subtext {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #fff; /* لون النص */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* ظل سميك للنص */
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.image {
+  max-width: 70%;
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+  border: 8px solid #270c31;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.95); /* ظل أبيض قوي */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 1); /* ظل أقوى عند المرور */
+}
+
+
+/* التصميم المتجاوب */
+@media screen and (max-width: 767px) {
+  .greeting {
+    font-size: 2rem;
+  }
+
+  .subtext {
+    font-size: 1.2rem;
+  }
+
+  .images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image {
+    max-width: 90%;
+    width: 300px; /* تقليص حجم الصورة للأجهزة الصغيرة */
+  }
+}
+
+/* للأجهزة اللوحية */
+@media screen and (max-width: 1024px) {
+  .greeting {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 1.3rem;
+  }
+
+  .image {
+    max-width: 80%;
+    width: 350px; /* تقليص الحجم قليلاً للأجهزة المتوسطة */
+  }
+}
+.blessing {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
